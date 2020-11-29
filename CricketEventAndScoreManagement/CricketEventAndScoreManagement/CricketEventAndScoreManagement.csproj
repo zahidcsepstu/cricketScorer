@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3492A9B8-CE9A-4D3F-A17C-7691144ABA93}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CricketEventAndScoreManagement</RootNamespace>
+    <AssemblyName>CricketEventAndScoreManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminmain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminmain.Designer.cs">
+      <DependentUpon>adminmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CricketDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CricketDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="events.Designer.cs">
+      <DependentUpon>events.cs</DependentUpon>
+    </Compile>
+    <Compile Include="live_score.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="live_score.Designer.cs">
+      <DependentUpon>live_score.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Match.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Match.Designer.cs">
+      <DependentUpon>Match.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeamDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TeamDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TeamDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TeamDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="usermain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usermain.Designer.cs">
+      <DependentUpon>usermain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTeam.Designer.cs">
+      <DependentUpon>ViewTeam.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="adminmain.resx">
+      <DependentUpon>adminmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="events.resx">
+      <DependentUpon>events.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="live_score.resx">
+      <DependentUpon>live_score.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Match.resx">
+      <DependentUpon>Match.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usermain.resx">
+      <DependentUpon>usermain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ViewTeam.resx">
+      <DependentUpon>ViewTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CricketDBDataSet.xsc">
+      <DependentUpon>CricketDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CricketDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CricketDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CricketDBDataSet.xss">
+      <DependentUpon>CricketDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TeamDBDataSet.xsc">
+      <DependentUpon>TeamDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TeamDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TeamDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TeamDBDataSet.xss">
+      <DependentUpon>TeamDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TeamDBDataSet1.xsc">
+      <DependentUpon>TeamDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TeamDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TeamDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TeamDBDataSet1.xss">
+      <DependentUpon>TeamDBDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
